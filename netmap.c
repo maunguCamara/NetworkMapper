@@ -32,5 +32,7 @@ int main (int argc, char *argv[]) {
             return -1;
             }
     }
+
+    printf("Start: %d\nEnd: %d\n", current, ending);
     return 0;
 }
