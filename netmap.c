@@ -20,7 +20,7 @@ int main (int argc, char *argv[]) {
         current = inet_addr(argv[2]);
         ending = (argc > 3) ?
             inet_addr(argv[3]) :
-            inet_addr("255.255.255.255");
+            inet_addr("223.255.254.255");
 
         if (
             (current == INADDR_NONE)
