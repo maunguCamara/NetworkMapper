@@ -1,9 +1,11 @@
 flags = -03 -Wall -std=c2x -fPIC -SHARED -ldl -D_GNU_SOURCE
 ldflags = 
-al: clean tahngutils.so
+all: clean tahngutils.so
+nm-version1: nm-version1.o
+	cc ${flags} $^ -o $@ ${ldflags}
 
-tahngutils.o: tahngutils.c2
-	$(CC) $(flags) -c tahngutils.c2cc ${flags} -c $^
+nm-naive.o: nm-naive.c
+	cc ${flags} -c $^
 
-clean:
-	rm -f tahngutils.o tahngutils.so
+clean 
+rm -f *.o nm-version1
